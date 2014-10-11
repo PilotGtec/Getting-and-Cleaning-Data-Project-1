@@ -56,3 +56,5 @@ Nevertheless, this problem only arises if we change all variable names to lowerc
 - `fBodyBodyAccJerkMag.meanFreq..`  
 - `fBodyBodyGyroMag.meanFreq..`    
 - `fBodyBodyGyroJerkMag.meanFreq..`
+
+This leaves us with 33 mean() variables for the measurements.
