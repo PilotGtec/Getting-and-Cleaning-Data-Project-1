@@ -33,12 +33,26 @@ In the `run_analysis.R` script, **Item 4** is implemented prior to the rest of t
 
 **Item 2** is a bit tricky as some variable names have the term "*mean*" in them, but not necessarily referring to the mean of a specific measurement. The author is referring to the following variables:
 
-- "angle.tBodyAccMean.gravity."          
-- "angle.tBodyAccJerkMean..gravityMean."
-- "angle.tBodyGyroMean.gravityMean."     
-- "angle.tBodyGyroJerkMean.gravityMean."
-- "angle.X.gravityMean."                 
-- "angle.Y.gravityMean."                
-- "angle.Z.gravityMean."    
+- `angle.tBodyAccMean.gravity.`        
+- `angle.tBodyAccJerkMean..gravityMean.`
+- `angle.tBodyGyroMean.gravityMean.` 
+- `angle.tBodyGyroJerkMean.gravityMean.`
+- `angle.X.gravityMean.` 
+- `angle.Y.gravityMean.`                
+- `angle.Z.gravityMean.`    
 
-Nevertheless, this problem only arises if we change all variable names to lowercase. If we do not perform any change in case (upper- or lower-) in the names, the function `grep("mean|std", names(Merged.X))` does the trick for **Item 2**. The `|` symbol in the `grep()` function indicates an *or* condition.
+Nevertheless, this problem only arises if we change all variable names to lowercase. If we do not perform any change in case (upper- or lower-) in the names, the function `grep("mean\\.|std\\.", names(Merged.X))` does the trick for **Item 2**. The `|` symbol in the `grep()` function indicates an *or* condition. The `\\.` allows us to exclude all the `meanFreq()` variables of the signals.
+
+- `fBodyAcc.meanFreq...X`           
+- `fBodyAcc.meanFreq...Y`           
+- `fBodyAcc.meanFreq...Z`          
+- `fBodyAccJerk.meanFreq...X`      
+- `fBodyAccJerk.meanFreq...Y`       
+- `fBodyAccJerk.meanFreq...Z`      
+- `fBodyGyro.meanFreq...X`          
+- `fBodyGyro.meanFreq...Y`          
+- `fBodyGyro.meanFreq...Z`         
+- `fBodyAccMag.meanFreq..`          
+- `fBodyBodyAccJerkMag.meanFreq..`  
+- `fBodyBodyGyroMag.meanFreq..`    
+- `fBodyBodyGyroJerkMag.meanFreq..`
