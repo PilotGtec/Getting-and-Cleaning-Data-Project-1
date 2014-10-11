@@ -1,4 +1,4 @@
-Getting and Cleaning Data Project1
+Getting and Cleaning Data Project 1
 ==================================
 
 In this project, we work with the following data:
