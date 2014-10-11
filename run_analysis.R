@@ -30,7 +30,7 @@ Final.Merged.Set <- cbind(Merged.Subject, Merged.Y, Merged.X)
 # [5] "angle.X.gravityMean."                 "angle.Y.gravityMean."                
 # [7] "angle.Z.gravityMean."    
 
-Mean.Std.Merged.X <- select(Merged.X, grep("mean|std", names(Merged.X)))
+Mean.Std.Merged.X <- select(Merged.X, grep("mean\\.|std\\.", names(Merged.X)))
 Final.Merged.Set <- cbind(Merged.Subject, Merged.Y, Mean.Std.Merged.X)
 
 ### (3) Uses descriptive activity names to name the activities in the data set
