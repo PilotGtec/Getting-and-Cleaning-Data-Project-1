@@ -4,7 +4,7 @@ Getting and Cleaning Data Project 1
 
 ### Data 
 In this project, we work with the *Human Activity Recognition Using Smartphones* dataset made available [here](
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). A full description of the experiment and dataset is provided in [this site](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 ### Project Objectives
 
@@ -23,8 +23,6 @@ The R-script for this project is `run_analysis.R`. The code utilizes two package
 
 1. Download the dataset by [clicking on this link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).  
 2. Unzip the downloaded file. This will then give you a folder named `UCI HAR Dataset`.
-3. The file `run_analysis.R` must be located one directory level higher than the `UCI HAR Dataset` folder such that running the following line of code will successfully give you a data frame called `X.Train` with 7,352 observations of 561 variables.
-```
-X.Train <- read.table("./UCI HAR Dataset/train/X_train.txt")
-```
-4. The output of the script is a file called `tidy_data_averages.csv` which gives you a tidy dataset with the average of each of the mean and std variables for each of the six activities and each of the 30 subjects.
+3. The file `run_analysis.R` must be located one directory level higher than the `UCI HAR Dataset` folder such that running the following line of code ```X.Train <- read.table("./UCI HAR Dataset/train/X_train.txt")``` inside the script will successfully give you a data frame called `X.Train` with 7,352 observations of 561 variables.
+
+4. The output of the script is a file called `tidy_data_averages.csv` which gives you a tidy dataset containing the average of each of the selected mean and standard deviation (std) variables for each of the six activities and each of the 30 subjects.
