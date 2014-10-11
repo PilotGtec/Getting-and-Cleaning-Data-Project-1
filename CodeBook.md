@@ -9,13 +9,15 @@ A full description of the experiment and dataset is provided in [this site](http
 ### Data Files and Structure
 Here, we work with the following files located inside the `UCI HAR Dataset` folder.
 - `features.txt`: List of all (561) features. These features correspond to the variables in the `X` test and train sets.
-- `activity_labels.txt`: Links the class labels with their activity name.
+- `activity_labels.txt`: Links the activity i.d. with their names (labels).
 - `train/subject_train.txt`: List of all subjects in the train set.
 - `test/subject_test.txt`: List of all subjects in the test set.
 - `train/X_train.txt`: Training set containing 7,352 observations of 561 variables.
-- `train/y_train.txt`: Training labels.
+- `train/y_train.txt`: Training activity list.
 - `test/X_test.txt`: Test set containing 2,947 observations of 561 variables.
-- `test/y_test.txt`: Test labels.
+- `test/y_test.txt`: Test activity list.
+
+Note that for the information on the activity desriptions, the script utilizes the following variables: `Activity.ID` (numeric) and `Activity.Label` (string).
 
 ### Analysis
 
