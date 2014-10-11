@@ -1,4 +1,6 @@
 library (dplyr)
+library(reshape2)
+
 ### Loading data with fixed column/header names-- this addresses
 ### item (4) Appropriately labels the data set with descriptive variable names
 features <- read.table("./UCI HAR Dataset/features.txt")
@@ -45,10 +47,9 @@ Final.Merged.Set <- select(Final.Merged.Set, -Activity.ID)
 ### (5) From the data set in step 4, create a second, 
 ### independent tidy data set with the average of each variable for each 
 ### activity and each subject.
-library(reshape2)
 molten <- melt(Final.Merged.Set, id = c("Activity.Label", "Subject.ID"))
 Tidy.Data.Averages <- dcast(molten, Subject.ID + Activity.Label ~ variable, mean)
 
-write.table(Tidy.Data.Averages, "tidy_data_averages.csv", 
+write.table(Tidy.Data.Averages, "tidy_data_averages.txt", 
             quote=FALSE, sep=",", row.names = FALSE)
   
