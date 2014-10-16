@@ -21,7 +21,7 @@ Note that for the information on the activity desriptions, the script utilizes t
 
 ### Analysis
 
-As stated in [README.md](https://github.com/PilotGtec/Getting-and-Cleaning-Data-Project-1/blob/master/README.md), we have been trasked to implement the following.
+As stated in the [README](https://github.com/PilotGtec/Getting-and-Cleaning-Data-Project-1/blob/master/README.md) file, we have been tasked to implement the following.
 
 1. Merge the training and the test sets to create one data set.
 2. Extract only the measurements on the mean and standard deviation for each measurement.
