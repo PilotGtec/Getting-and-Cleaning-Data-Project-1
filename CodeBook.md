@@ -41,7 +41,7 @@ In the `run_analysis.R` script, **Item 4** is implemented prior to the rest of t
 - `angle.Y.gravityMean.`                
 - `angle.Z.gravityMean.`    
 
-Nevertheless, this problem only arises if we change all variable names to lowercase. If we do not perform any change in case (upper- or lower-) in the names, the function `grep("mean\\.|std\\.", names(Merged.X))` does the trick for **Item 2**. The `|` symbol in the `grep()` function indicates an *or* condition. The `\\.` allows us to exclude all the `meanFreq()` variables of the signals.
+Nevertheless, this problem only arises if we change all variable names to lowercase. If we do not perform any change in case (upper- or lower-) in the names, the function `grep("mean\\.|std\\.", names(Merged.X))` does the trick for **Item 2**. The `|` symbol in the `grep()` function indicates an *or* condition. The `\\.` allows us to exclude all the `meanFreq()` variables of the signals as they have been enumerated separately from `mean()` in the dataset description. That is, we are also excluding the following variables:
 
 - `fBodyAcc.meanFreq...X`           
 - `fBodyAcc.meanFreq...Y`           
@@ -57,4 +57,4 @@ Nevertheless, this problem only arises if we change all variable names to lowerc
 - `fBodyBodyGyroMag.meanFreq..`    
 - `fBodyBodyGyroJerkMag.meanFreq..`
 
-This leaves us with 33 mean() variables for the measurements.
+This leaves us with 33 mean() and 33 std() variables for the measurements.
